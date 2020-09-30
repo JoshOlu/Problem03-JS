@@ -1,8 +1,6 @@
 class ArrayRotator {
     rotateLeft(arr, n){
-    	for (let i = 0; i < n; i++) {
-    		arr.push(arr.shift());
-    	}
+    	arr.push(...arr.splice(0, n));
     	return arr;
     }
 }
